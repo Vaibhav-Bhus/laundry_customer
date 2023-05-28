@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:laundry_customer/screens/home.dart';
+import 'package:laundry_customer/constants/images.dart';
+import 'package:laundry_customer/screens/address.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -8,18 +9,18 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SplashScreenView(
-          navigateRoute: HomeScreen(),
-          duration: 4500,
-          imageSize: 450,
-          pageRouteTransition: PageRouteTransition.SlideTransition,
-          // imageSrc: "assets/images/animation.gif",
-          text: 'Aqua Go',
-          textType: TextType.ColorizeAnimationText,
-          textStyle: const TextStyle(
-            fontSize: 40,
-            letterSpacing: 4,
-          ),
-          backgroundColor: Colors.transparent,
-        );
+      navigateRoute: const AddressScreen(),
+      duration: 4500,
+      imageSize: 450,
+      pageRouteTransition: PageRouteTransition.SlideTransition,
+      imageSrc: splashScreenImage,
+      // text: 'Aqua Go',
+      // textType: TextType.ColorizeAnimationText,
+      // textStyle: const TextStyle(
+      //   fontSize: 40,
+      //   letterSpacing: 4,
+      // ),
+      backgroundColor: const Color(0XFF5597FF),
+    );
   }
 }
