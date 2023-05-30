@@ -49,6 +49,7 @@ const String callImage = 'assets/images/Call.png';
 const String ratingImage = 'assets/images/Star.png';
 const String referralImage = 'assets/images/Investment data-cuate 1.png';
 const String jeansImage = 'assets/images/Jeans.png';
+const String rateSellerImage = 'assets/images/rateSeller.png';
 
 const String jennyImage = 'assets/images/Ellipse 241.png';
 const String ronaldImage = 'assets/images/Ellipse 235.png';

@@ -1,6 +1,7 @@
 // ignore_for_file: sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'package:laundry_customer/screens/home_page.dart';
 
 import '../constants/images.dart';
 import '../widgets/custom_button.dart';
@@ -658,7 +659,10 @@ class _SelectItemsScreenState extends State<SelectItemsScreen> {
                   height: MediaQuery.maybeOf(context)!.size.height * 0.035,
                 ),
                 CustomButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const HomePageScreen()));
+                  },
                   title: 'Continue',
                 ),
               ],

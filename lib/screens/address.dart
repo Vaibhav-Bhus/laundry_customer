@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:laundry_customer/screens/instructions.dart';
 
 import '../widgets/custom_button.dart';
 
@@ -125,7 +126,10 @@ class _AddressScreenState extends State<AddressScreen> {
                   height: MediaQuery.maybeOf(context)!.size.height * 0.38,
                 ),
                 CustomButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const InstructionsScreen()));
+                  },
                   title: 'Confirm',
                 ),
               ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:laundry_customer/constants/images.dart';
+import 'package:laundry_customer/screens/address.dart';
 import 'package:laundry_customer/widgets/custom_button.dart';
 
 class PlaceOrderScreen extends StatefulWidget {
@@ -167,7 +168,10 @@ class _PlaceOrderScreenState extends State<PlaceOrderScreen> {
                   height: MediaQuery.maybeOf(context)!.size.height * 0.15,
                 ),
                 CustomButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const AddressScreen()));
+                  },
                   title: 'Continue',
                 ),
               ],

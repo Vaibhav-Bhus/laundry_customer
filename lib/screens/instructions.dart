@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:laundry_customer/screens/select_items.dart';
 
 import '../constants/images.dart';
 import '../widgets/custom_button.dart';
@@ -192,7 +193,10 @@ class _InstructionsScreenState extends State<InstructionsScreen> {
                   height: MediaQuery.maybeOf(context)!.size.height * 0.035,
                 ),
                 CustomButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const SelectItemsScreen()));
+                  },
                   title: 'Continue',
                 ),
               ],

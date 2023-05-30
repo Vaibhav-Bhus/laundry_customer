@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:laundry_customer/screens/place_order.dart';
 
 import '../constants/images.dart';
 
@@ -91,25 +92,29 @@ class _ServicesScreenState extends State<ServicesScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    height: 195,
-                    width: MediaQuery.maybeOf(context)!.size.width * 0.39,
-                    decoration: BoxDecoration(
-                      color: const Color(0XFF8FD7C7),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(washIronLogo),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        const Text(
-                          'Wash & Iron',
-                          style: TextStyle(fontSize: 20, color: Colors.white),
-                        ),
-                      ],
+                  InkWell(
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const PlaceOrderScreen())),
+                    child: Container(
+                      height: 195,
+                      width: MediaQuery.maybeOf(context)!.size.width * 0.39,
+                      decoration: BoxDecoration(
+                        color: const Color(0XFF8FD7C7),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(washIronLogo),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          const Text(
+                            'Wash & Iron',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   Container(
