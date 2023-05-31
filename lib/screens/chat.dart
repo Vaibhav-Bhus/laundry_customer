@@ -20,7 +20,9 @@ class _ChatScreenState extends State<ChatScreen> {
         leading: Align(
           alignment: Alignment.topLeft,
           child: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
             icon: const Icon(
               Icons.arrow_back_ios_new,
               color: Colors.black,
@@ -78,6 +80,8 @@ class _ChatScreenState extends State<ChatScreen> {
                   height: 20,
                 ),
                 ListTile(
+                  onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const ProviderProfileScreen())),
                   leading: Image.asset(ronaldImage),
                   title: const Text(
                     'Ronald Richard',

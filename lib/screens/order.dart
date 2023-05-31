@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:laundry_customer/constants/images.dart';
+import 'package:laundry_customer/screens/payment.dart';
 import 'package:laundry_customer/widgets/custom_button.dart';
 
 class OrderScreen extends StatefulWidget {
@@ -20,7 +21,9 @@ class _OrderScreenState extends State<OrderScreen> {
         leading: Align(
           alignment: Alignment.topLeft,
           child: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
             icon: const Icon(
               Icons.arrow_back_ios_new,
               color: Colors.black,
@@ -277,7 +280,10 @@ class _OrderScreenState extends State<OrderScreen> {
                   height: 50,
                 ),
                 CustomButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const PaymentScreen()));
+                  },
                   title: 'Continue',
                 )
               ],

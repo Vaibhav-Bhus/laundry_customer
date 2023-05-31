@@ -19,7 +19,9 @@ class _SupportScreenState extends State<SupportScreen> {
         leading: Align(
           alignment: Alignment.topLeft,
           child: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
             icon: const Icon(
               Icons.arrow_back_ios_new,
               color: Colors.black,

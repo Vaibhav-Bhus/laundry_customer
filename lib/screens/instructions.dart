@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:laundry_customer/screens/home_page.dart';
 import 'package:laundry_customer/screens/select_items.dart';
 
 import '../constants/images.dart';
@@ -22,7 +23,9 @@ class _InstructionsScreenState extends State<InstructionsScreen> {
         leading: Align(
           alignment: Alignment.topLeft,
           child: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
             icon: const Icon(
               Icons.arrow_back_ios_new,
               color: Colors.black,
@@ -91,32 +94,36 @@ class _InstructionsScreenState extends State<InstructionsScreen> {
                 SizedBox(
                   height: MediaQuery.maybeOf(context)!.size.height * 0.040,
                 ),
-                Container(
-                  height: 70,
-                  padding: const EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(width: 1)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Image.asset(clothesImage),
-                      const Text(
-                        'Select Items',
-                        style:
-                            TextStyle(fontSize: 16, color: Color(0xFF797777)),
-                      ),
-                      SizedBox(
-                        width: MediaQuery.maybeOf(context)!.size.width * 0.25,
-                      ),
-                      IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.add,
-                            size: 30,
-                            color: Color(0xFF797777),
-                          ))
-                    ],
+                InkWell(
+                  onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const SelectItemsScreen())),
+                  child: Container(
+                    height: 70,
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        border: Border.all(width: 1)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Image.asset(clothesImage),
+                        const Text(
+                          'Select Items',
+                          style:
+                              TextStyle(fontSize: 16, color: Color(0xFF797777)),
+                        ),
+                        SizedBox(
+                          width: MediaQuery.maybeOf(context)!.size.width * 0.25,
+                        ),
+                        IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.add,
+                              size: 30,
+                              color: Color(0xFF797777),
+                            ))
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -195,7 +202,7 @@ class _InstructionsScreenState extends State<InstructionsScreen> {
                 CustomButton(
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const SelectItemsScreen()));
+                        builder: (context) => const HomePageScreen()));
                   },
                   title: 'Continue',
                 ),

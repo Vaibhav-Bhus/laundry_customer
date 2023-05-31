@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:laundry_customer/screens/place_order.dart';
 
 import '../constants/images.dart';
+import 'menu.dart';
 
 class ServicesScreen extends StatefulWidget {
   const ServicesScreen({super.key});
@@ -48,7 +49,12 @@ class _ServicesScreenState extends State<ServicesScreen> {
                           child: Image.asset(userLogoImage),
                         ),
                         trailing: IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const MenuScreen()));
+                            },
                             icon: const Icon(
                               Icons.more_vert,
                               color: Colors.white,
@@ -117,75 +123,29 @@ class _ServicesScreenState extends State<ServicesScreen> {
                       ),
                     ),
                   ),
-                  Container(
-                    height: 195,
-                    width: MediaQuery.maybeOf(context)!.size.width * 0.39,
-                    decoration: BoxDecoration(
-                      color: const Color(0XFF8FD7C7),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(dryCleaningLogo),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        const Text(
-                          'Dry Cleaning',
-                          style: TextStyle(fontSize: 20, color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: MediaQuery.maybeOf(context)!.size.height * 0.035,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    height: 195,
-                    width: MediaQuery.maybeOf(context)!.size.width * 0.39,
-                    decoration: BoxDecoration(
-                      color: const Color(0XFF8FD7C7),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(ironLogo),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        const Text(
-                          'Ironing',
-                          style: TextStyle(fontSize: 20, color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    height: 195,
-                    width: MediaQuery.maybeOf(context)!.size.width * 0.39,
-                    decoration: BoxDecoration(
-                      color: const Color(0XFF8FD7C7),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(ironAndFoldLogo),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        const Text(
-                          'Iron & Fold',
-                          style: TextStyle(fontSize: 20, color: Colors.white),
-                        ),
-                      ],
+                  InkWell(
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const PlaceOrderScreen())),
+                    child: Container(
+                      height: 195,
+                      width: MediaQuery.maybeOf(context)!.size.width * 0.39,
+                      decoration: BoxDecoration(
+                        color: const Color(0XFF8FD7C7),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(dryCleaningLogo),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          const Text(
+                            'Dry Cleaning',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -196,46 +156,54 @@ class _ServicesScreenState extends State<ServicesScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    height: 195,
-                    width: MediaQuery.maybeOf(context)!.size.width * 0.39,
-                    decoration: BoxDecoration(
-                      color: const Color(0XFF8FD7C7),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(washLogo),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        const Text(
-                          'Wash',
-                          style: TextStyle(fontSize: 20, color: Colors.white),
-                        ),
-                      ],
+                  InkWell(
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const PlaceOrderScreen())),
+                    child: Container(
+                      height: 195,
+                      width: MediaQuery.maybeOf(context)!.size.width * 0.39,
+                      decoration: BoxDecoration(
+                        color: const Color(0XFF8FD7C7),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(ironLogo),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          const Text(
+                            'Ironing',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  Container(
-                    height: 195,
-                    width: MediaQuery.maybeOf(context)!.size.width * 0.39,
-                    decoration: BoxDecoration(
-                      color: const Color(0XFF8FD7C7),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(homeCareLogo),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        const Text(
-                          'Home Care',
-                          style: TextStyle(fontSize: 20, color: Colors.white),
-                        ),
-                      ],
+                  InkWell(
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const PlaceOrderScreen())),
+                    child: Container(
+                      height: 195,
+                      width: MediaQuery.maybeOf(context)!.size.width * 0.39,
+                      decoration: BoxDecoration(
+                        color: const Color(0XFF8FD7C7),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(ironAndFoldLogo),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          const Text(
+                            'Iron & Fold',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -246,25 +214,87 @@ class _ServicesScreenState extends State<ServicesScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    height: 195,
-                    width: MediaQuery.maybeOf(context)!.size.width * 0.39,
-                    decoration: BoxDecoration(
-                      color: const Color(0XFF8FD7C7),
-                      borderRadius: BorderRadius.circular(15),
+                  InkWell(
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const PlaceOrderScreen())),
+                    child: Container(
+                      height: 195,
+                      width: MediaQuery.maybeOf(context)!.size.width * 0.39,
+                      decoration: BoxDecoration(
+                        color: const Color(0XFF8FD7C7),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(washLogo),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          const Text(
+                            'Wash',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                        ],
+                      ),
                     ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(foldLogo),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        const Text(
-                          'Fold',
-                          style: TextStyle(fontSize: 20, color: Colors.white),
-                        ),
-                      ],
+                  ),
+                  InkWell(
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const PlaceOrderScreen())),
+                    child: Container(
+                      height: 195,
+                      width: MediaQuery.maybeOf(context)!.size.width * 0.39,
+                      decoration: BoxDecoration(
+                        color: const Color(0XFF8FD7C7),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(homeCareLogo),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          const Text(
+                            'Home Care',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: MediaQuery.maybeOf(context)!.size.height * 0.035,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  InkWell(
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const PlaceOrderScreen())),
+                    child: Container(
+                      height: 195,
+                      width: MediaQuery.maybeOf(context)!.size.width * 0.39,
+                      decoration: BoxDecoration(
+                        color: const Color(0XFF8FD7C7),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(foldLogo),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          const Text(
+                            'Fold',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   Container(

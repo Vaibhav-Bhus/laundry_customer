@@ -124,16 +124,16 @@ class _HomeScreenState extends State<HomeScreen> {
                           fontWeight: FontWeight.w500),
                     ),
                     leading: InkWell(
-                      onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const MenuScreen())),
                       child: CircleAvatar(
-                        
                         radius: 35,
                         child: Image.asset(userLogoImage),
                       ),
                     ),
                     trailing: IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => const MenuScreen()));
+                        },
                         icon: const Icon(
                           Icons.more_vert,
                           color: Colors.white,
@@ -247,7 +247,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: MediaQuery.maybeOf(context)!.size.height * 0.025),
               InkWell(
                 onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const OrderScreen())),
+                    builder: (context) => const OrderScreen())),
                 child: Container(
                   height: 115,
                   decoration: BoxDecoration(
@@ -295,7 +295,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Text(
                                         '     2. Jeans',
@@ -317,7 +318,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ],
                                   ),
                                   Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Text(
                                         '   1. Abhaya',
@@ -350,105 +352,111 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               SizedBox(
                   height: MediaQuery.maybeOf(context)!.size.height * 0.025),
-              Container(
-                height: 115,
-                decoration: BoxDecoration(
-                    color: const Color(0XFF5597FF),
-                    borderRadius: BorderRadius.circular(20)),
-                child: Center(
-                    child: Stack(
-                  children: [
-                    Align(
-                      alignment: Alignment.topLeft,
-                      child: Image.asset(washImage),
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.all(12.0),
-                      child: Align(
-                        alignment: Alignment.topRight,
-                        child: Text(
-                          'In Progress',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w400,
+              InkWell(
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const OrderScreen())),
+                child: Container(
+                  height: 115,
+                  decoration: BoxDecoration(
+                      color: const Color(0XFF5597FF),
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Center(
+                      child: Stack(
+                    children: [
+                      Align(
+                        alignment: Alignment.topLeft,
+                        child: Image.asset(washImage),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(12.0),
+                        child: Align(
+                          alignment: Alignment.topRight,
+                          child: Text(
+                            'In Progress',
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w400,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    const Align(
-                      alignment: Alignment.center,
-                      child: Padding(
-                        padding: EdgeInsets.all(12.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Wash ',
-                              style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.white),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      '     2. Jeans',
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.white),
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      '     4. Shorts',
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.white),
-                                    ),
-                                  ],
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      '   1. Shirt',
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.white),
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      '   ',
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.white),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
+                      const Align(
+                        alignment: Alignment.center,
+                        child: Padding(
+                          padding: EdgeInsets.all(12.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                'Wash ',
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.white),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        '     2. Jeans',
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w400,
+                                            color: Colors.white),
+                                      ),
+                                      SizedBox(
+                                        height: 5,
+                                      ),
+                                      Text(
+                                        '     4. Shorts',
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w400,
+                                            color: Colors.white),
+                                      ),
+                                    ],
+                                  ),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        '   1. Shirt',
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w400,
+                                            color: Colors.white),
+                                      ),
+                                      SizedBox(
+                                        height: 5,
+                                      ),
+                                      Text(
+                                        '   ',
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w400,
+                                            color: Colors.white),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                    )
-                  ],
-                )),
+                      )
+                    ],
+                  )),
+                ),
               ),
             ],
           ),

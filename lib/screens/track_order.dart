@@ -19,7 +19,9 @@ class _TrackYourOrderScreenState extends State<TrackYourOrderScreen> {
         leading: Align(
           alignment: Alignment.topLeft,
           child: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
             icon: const Icon(
               Icons.arrow_back_ios_new,
               color: Colors.black,
@@ -44,7 +46,6 @@ class _TrackYourOrderScreenState extends State<TrackYourOrderScreen> {
                   height: 35,
                 ),
                 Stack(
-                  
                   children: [
                     CircleAvatar(
                       radius: 40,

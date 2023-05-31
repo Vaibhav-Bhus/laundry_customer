@@ -21,7 +21,9 @@ class _PlaceOrderScreenState extends State<PlaceOrderScreen> {
         leading: Align(
           alignment: Alignment.topLeft,
           child: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
             icon: const Icon(
               Icons.arrow_back_ios_new,
               color: Colors.black,
@@ -68,31 +70,35 @@ class _PlaceOrderScreenState extends State<PlaceOrderScreen> {
                 SizedBox(
                   height: MediaQuery.maybeOf(context)!.size.height * 0.010,
                 ),
-                Container(
-                  padding: const EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(width: 1)),
-                  height: 70,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Image.asset(pickupAddressImage),
-                      const Text(
-                        'Pickup address',
-                        style: TextStyle(fontSize: 16),
-                      ),
-                      SizedBox(
-                        width: MediaQuery.maybeOf(context)!.size.width * 0.25,
-                      ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.add,
-                          size: 30,
+                InkWell(
+                  onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const AddressScreen())),
+                  child: Container(
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        border: Border.all(width: 1)),
+                    height: 70,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Image.asset(pickupAddressImage),
+                        const Text(
+                          'Pickup address',
+                          style: TextStyle(fontSize: 16),
                         ),
-                      ),
-                    ],
+                        SizedBox(
+                          width: MediaQuery.maybeOf(context)!.size.width * 0.25,
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.add,
+                            size: 30,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -121,24 +127,29 @@ class _PlaceOrderScreenState extends State<PlaceOrderScreen> {
                 SizedBox(
                   height: MediaQuery.maybeOf(context)!.size.height * 0.040,
                 ),
-                Container(
-                  height: 70,
-                  padding: const EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(width: 1)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Image.asset(dropAddressImage),
-                      SizedBox(
-                        width: MediaQuery.maybeOf(context)!.size.width * 0.025,
-                      ),
-                      const Text(
-                        'Drop of address',
-                        style: TextStyle(fontSize: 16),
-                      ),
-                    ],
+                InkWell(
+                  onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const AddressScreen())),
+                  child: Container(
+                    height: 70,
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        border: Border.all(width: 1)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Image.asset(dropAddressImage),
+                        SizedBox(
+                          width:
+                              MediaQuery.maybeOf(context)!.size.width * 0.025,
+                        ),
+                        const Text(
+                          'Drop of address',
+                          style: TextStyle(fontSize: 16),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(

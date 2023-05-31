@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:laundry_customer/constants/images.dart';
+import 'package:laundry_customer/screens/menu.dart';
 
 class DiscountsScreen extends StatefulWidget {
   const DiscountsScreen({super.key});
@@ -42,7 +43,10 @@ class _DiscountsScreenState extends State<DiscountsScreen> {
                         child: Image.asset(userLogoImage),
                       ),
                       trailing: IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => const MenuScreen()));
+                          },
                           icon: const Icon(
                             Icons.more_vert,
                             color: Colors.white,

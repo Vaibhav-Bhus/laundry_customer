@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:laundry_customer/constants/images.dart';
-import 'package:laundry_customer/screens/referal.dart';
-import 'package:laundry_customer/screens/service_providers.dart';
-import 'package:laundry_customer/screens/track_order.dart';
+import 'package:laundry_customer/screens/mobile_number.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -11,7 +9,7 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SplashScreenView(
-      navigateRoute: const TrackYourOrderScreen(),
+      navigateRoute: const MobileNumberScreen(),
       duration: 4500,
       imageSize: 450,
       pageRouteTransition: PageRouteTransition.SlideTransition,

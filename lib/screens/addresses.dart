@@ -20,7 +20,9 @@ class _AddtrssesScreenState extends State<AddtrssesScreen> {
         leading: Align(
           alignment: Alignment.topLeft,
           child: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
             icon: const Icon(
               Icons.arrow_back_ios_new,
               color: Colors.black,
@@ -107,8 +109,7 @@ class _AddtrssesScreenState extends State<AddtrssesScreen> {
                   child: TextButton(
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) =>
-                                const AddressScreen()));
+                            builder: (context) => const AddressScreen()));
                       },
                       child: const Text(
                         '+ Add New Address',

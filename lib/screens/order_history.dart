@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:laundry_customer/screens/menu.dart';
 
 import '../constants/images.dart';
 
@@ -47,7 +48,12 @@ class _OrdrerHistoryScreenState extends State<OrdrerHistoryScreen> {
                           child: Image.asset(userLogoImage),
                         ),
                         trailing: IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const MenuScreen()));
+                            },
                             icon: const Icon(
                               Icons.more_vert,
                               color: Colors.white,

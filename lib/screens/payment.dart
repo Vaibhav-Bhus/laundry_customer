@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:laundry_customer/screens/service_providers.dart';
 
 import '../constants/images.dart';
 import '../widgets/custom_button.dart';
@@ -21,7 +22,9 @@ class _PaymentScreenState extends State<PaymentScreen> {
         leading: Align(
           alignment: Alignment.topLeft,
           child: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
             icon: const Icon(
               Icons.arrow_back_ios_new,
               color: Colors.black,
@@ -306,7 +309,10 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   height: MediaQuery.maybeOf(context)!.size.height * 0.030,
                 ),
                 CustomButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const ServiceProviderScreen()));
+                  },
                   title: 'Done',
                 ),
               ],
