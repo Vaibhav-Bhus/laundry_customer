@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:laundry_customer/constants/images.dart';
+import 'package:laundry_customer/screens/referal2.dart';
 
 class ReferalScreen extends StatefulWidget {
   const ReferalScreen({super.key});
@@ -102,6 +103,7 @@ class _ReferalScreenState extends State<ReferalScreen> {
                               width: 5,
                             ),
                             Container(
+                              width: MediaQuery.of(context).size.width * 0.70,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(5),
                                   border: Border.all(color: Colors.white)),
@@ -133,6 +135,7 @@ class _ReferalScreenState extends State<ReferalScreen> {
                               width: 5,
                             ),
                             Container(
+                              width: MediaQuery.of(context).size.width * 0.70,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(5),
                                   border: Border.all(color: Colors.white)),
@@ -158,7 +161,11 @@ class _ReferalScreenState extends State<ReferalScreen> {
                               borderRadius: BorderRadius.circular(5)),
                           child: Center(
                             child: InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) =>
+                                        ReferalOrderStatus()));
+                              },
                               child: const Text(
                                 'Invite Friends',
                                 style: TextStyle(

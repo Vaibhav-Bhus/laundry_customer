@@ -100,7 +100,7 @@ class _ProviderProfileScreenState extends State<ProviderProfileScreen> {
                     const Text(
                       'off',
                       style: TextStyle(fontSize: 14),
-                    )
+                    ),
                   ],
                 ),
                 const SizedBox(
@@ -113,14 +113,15 @@ class _ProviderProfileScreenState extends State<ProviderProfileScreen> {
                 const SizedBox(
                   height: 35,
                 ),
-                Text(
+                const Text(
                   'Jenny\'s expertise in wash & iron service is complemented by her friendly and approachable nature. She enjoys building strong relationships with her clients and takes the time to listen to their needs and concerns. Her focus on customer satisfaction has earned her a loyal following and many repeat clients.',
                   style: TextStyle(
-                      fontSize: 17,
-                      color: Color(0xff797777),
-                      letterSpacing: 1.5),
+                    fontSize: 17,
+                    color: Color(0xff797777),
+                    // letterSpacing: 1.5
+                  ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 35,
                 ),
                 Row(
@@ -210,41 +211,41 @@ class _ProviderProfileScreenState extends State<ProviderProfileScreen> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 35,
                 ),
                 const Text(
                   'Service Offering',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 35,
                 ),
                 Row(
                   children: [
                     CircleAvatar(
                       radius: 55,
-                      backgroundColor: Color(0xff8FD7C7),
+                      backgroundColor: const Color(0xff8FD7C7),
                       child: Column(
                         children: [
                           Image.asset(ironLogo, scale: 1.4),
-                          Text(
+                          const Text(
                             'Ironing',
                             style: TextStyle(fontSize: 15, color: Colors.white),
                           )
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     CircleAvatar(
                       radius: 55,
-                      backgroundColor: Color(0xff8FD7C7),
+                      backgroundColor: const Color(0xff8FD7C7),
                       child: Column(
                         children: [
                           Image.asset(dryCleaningLogo, scale: 1.4),
-                          Text(
+                          const Text(
                             'Dry Clean',
                             style: TextStyle(fontSize: 15, color: Colors.white),
                           )
@@ -253,14 +254,14 @@ class _ProviderProfileScreenState extends State<ProviderProfileScreen> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 35,
                 ),
                 const Text(
                   'Rate the seller',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 35,
                 ),
                 Center(child: Image.asset(rateSellerImage)),
